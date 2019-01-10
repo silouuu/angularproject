@@ -1,0 +1,17 @@
+<p>
+  liste works!
+</p>
+
+<ul>
+    <li *ngFor="let joueur of joueurs">
+       <h2 id="titre">{{ joueur.firstName }} {{ joueur.lastName }}</h2>
+       <button type="button" (click)="select(joueur)">Détails</button>
+    </li>
+</ul>
+<app-details [joueurSelectionne]="selected" *ngIf="displayDetails" ></app-details>
+
+
+
+
+
+
